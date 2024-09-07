@@ -1,3 +1,52 @@
+@import url("./fonts.css");
+
+/* Variables */
+:root {
+  /*Color Variables*/
+  --white: #eee;
+
+  /* Font Size Variables */
+  --text-heading: 2rem;
+  --text-subheading: 1.5rem;
+  --text-body: 1rem;
+
+  /* Font Family Variables */
+  --font-family-body: "arvoregular", system-ui, Arial;
+  --font-family-heading: "latobold", Arial, Helvetica, sans-serif;
+
+  font-size: 1em;
+}
+
 body {
-  background-color: #eee;
+  background-color: var(--white);
+  font-family: var(--font-family-body);
+}
+
+/* Text Elements */
+#content {
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
+}
+h1 {
+  font-size: var(--text-heading);
+}
+h2 {
+  font-size: var(--text-subheading);
+}
+p {
+  font-size: var(--text-body);
+}
+
+ul {
+  padding: 0;
+}
+.hero-img {
+  width: 100vw;
 }
