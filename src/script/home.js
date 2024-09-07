@@ -12,7 +12,7 @@
         </ul> */
 }
 
-function home() {
+function homeFactory() {
   const heroImg = document.createElement("img");
   const heroH1 = document.createElement("h1");
   const heroH2 = document.createElement("h2");
@@ -23,12 +23,11 @@ function home() {
   heroH1.textContent = "Odin Restaurant";
 
   function render() {
-    console.log("test");
     content.appendChild(heroH1);
   }
 
   return { render };
 }
 
-const displayHome = home();
-export { displayHome };
+const home = homeFactory();
+export { home };
