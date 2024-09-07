@@ -9,4 +9,4 @@ import { about } from "./about.js";
 
 console.log("JS is linked.");
 
-console.log(displayHome);
+displayHome.render();

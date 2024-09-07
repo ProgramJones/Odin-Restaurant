@@ -23,6 +23,7 @@ function home() {
   heroH1.textContent = "Odin Restaurant";
 
   function render() {
+    console.log("test");
     content.appendChild(heroH1);
   }
 
