@@ -1,29 +1,31 @@
-{
-  /* <img
-          class="hero-img"
-          src="./assets/images/orange-kitchen.jpg"
-          alt="Hanging utensils."
-        />
-        <h1>Odin Restaurant</h1>
-        <h2>Your local vegan eatery</h2>
-        <p>Featured Dishes</p>
-        <ul>
-          <li>Beyond Burger</li>
-        </ul> */
-}
+import heroImgSrc from "../assets/images/orange-kitchen.jpg";
 
 function homeFactory() {
+  // Create Elements
   const heroImg = document.createElement("img");
   const heroH1 = document.createElement("h1");
   const heroH2 = document.createElement("h2");
+  const featuredUlP = document.createElement("p");
   const featuredUl = document.createElement("ul");
-  const featuredItemOne = document.createElement("li");
+  const featuredUlItemOne = document.createElement("li");
+  // Select Elements
   const content = document.querySelector("#content");
 
+  heroImg.src = heroImgSrc;
   heroH1.textContent = "Odin Restaurant";
+  heroH2.textContent = "Your local vegan eatery";
+
+  featuredUlP.textContent = "Featured Dishes";
+  featuredUlItemOne.textContent = "Beyond Burger";
+
+  featuredUl.appendChild(featuredUlItemOne);
 
   function render() {
+    content.appendChild(heroImg);
     content.appendChild(heroH1);
+    content.appendChild(heroH2);
+    content.appendChild(featuredUlP);
+    content.appendChild(featuredUl);
   }
 
   return { render };
