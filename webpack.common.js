@@ -2,7 +2,6 @@ const path = require("path");
 const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
   entry: {
     main: "./src/script/index.js",
   },
@@ -31,10 +30,6 @@ module.exports = {
         type: "asset/resource",
       },
     ],
-  },
-  devtool: "eval-source-map",
-  devServer: {
-    watchFiles: ["./src/template.html"],
   },
   plugins: [
     new HTMLWebpackPlugin({
