@@ -4,11 +4,19 @@
 :root {
   /*Color Variables*/
   --white: #eee;
+  --orange: #e56b6f;
 
   /* Font Size Variables */
   --text-heading: 2rem;
   --text-subheading: 1.5rem;
   --text-body: 1rem;
+
+  /* Spacing Variables */
+  --biggest-spacing: 2.5rem;
+  --big-spacing: 2rem;
+  --medium-spacing: 1.5rem;
+  --small-spacing: 1rem;
+  --smallest-spacing: 0.5rem;
 
   /* Font Family Variables */
   --font-family-body: "arvoregular", system-ui, Arial;
@@ -21,11 +29,50 @@ body {
   background-color: var(--white);
   font-family: var(--font-family-body);
 }
-
-/* Text Elements */
 #content {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+header nav {
+  padding: var(--smallest-spacing);
+}
+button {
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: var(--smallest-spacing) var(--small-spacing);
+}
+button:hover {
+  cursor: pointer;
+}
+.menuCard {
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: var(--smallest-spacing);
+}
+.hero-img {
+  width: 100vw;
+}
+
+form ul li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--small-spacing);
+}
+input,
+textarea {
+  border-radius: 5px;
+}
+
+.contactH1 {
+  margin: var(--medium-spacing);
+}
+/* Text Elements */
+
 h1,
 h2,
 h3,
@@ -43,10 +90,6 @@ h2 {
 p {
   font-size: var(--text-body);
 }
-
 ul {
   padding: 0;
-}
-.hero-img {
-  width: 100vw;
 }
